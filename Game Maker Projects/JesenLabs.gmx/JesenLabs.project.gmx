@@ -4,13 +4,45 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
-  <sprites name="sprites"/>
+  <sounds name="sound">
+    <sound>sound\sfx_jump</sound>
+  </sounds>
+  <sprites name="sprites">
+    <sprites name="Entities">
+      <sprite>sprites\spr_nig</sprite>
+      <sprite>sprites\spr_jesen</sprite>
+    </sprites>
+    <sprites name="Environment">
+      <sprite>sprites\spr_platform</sprite>
+      <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\spr_halfwall</sprite>
+    </sprites>
+  </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <objects name="Room">
+      <object>objects\obj_main</object>
+    </objects>
+    <objects name="Entities">
+      <object>objects\obj_jesen</object>
+      <object>objects\obj_nig</object>
+    </objects>
+    <objects name="Environment">
+      <object>objects\obj_platform</object>
+      <object>objects\obj_wall</object>
+      <object>objects\obj_halfwall</object>
+    </objects>
+    <objects name="Parents">
+      <object>objects\obj_collision</object>
+    </objects>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_main</room>
+  </rooms>
   <constants number="2">
-    <constant name="GM_build_date">0</constant>
-    <constant name="GM_version">0</constant>
+    <constant name="GM_build_date">41945.8720842014</constant>
+    <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
