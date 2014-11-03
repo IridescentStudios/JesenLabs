@@ -9,6 +9,7 @@
     <sound>sound\sfx_die</sound>
   </sounds>
   <sprites name="sprites">
+    <sprite>sprites\spr_nodraw</sprite>
     <sprites name="Entities">
       <sprite>sprites\spr_nig</sprite>
       <sprite>sprites\spr_jesen</sprite>
@@ -20,10 +21,9 @@
       <sprite>sprites\spr_dirt3</sprite>
       <sprite>sprites\spr_dirt4</sprite>
     </sprites>
-    <sprite>sprites\spr_bgtemp</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\bg_temp</background>
+    <background>background\bg_main</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -48,12 +48,13 @@
     <objects name="Parents">
       <object>objects\obj_collision</object>
     </objects>
+    <object>objects\obj_nodraw</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41945.9809933102</constant>
+    <constant name="GM_build_date">41946.048656875</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
