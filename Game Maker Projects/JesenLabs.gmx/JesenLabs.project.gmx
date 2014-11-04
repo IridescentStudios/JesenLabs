@@ -12,6 +12,7 @@
     <sprites name="Entities">
       <sprite>sprites\spr_nig</sprite>
       <sprite>sprites\spr_jesen</sprite>
+      <sprite>sprites\spr_nigJump</sprite>
     </sprites>
     <sprites name="Environment">
       <sprite>sprites\spr_platform</sprite>
@@ -57,12 +58,18 @@
     <objects name="Invisible/Dev">
       <object>objects\obj_nodraw</object>
     </objects>
+    <objects name="Pause">
+      <object>objects\obj_resumeButton</object>
+      <object>objects\obj_pauseText</object>
+      <object>objects\obj_pause</object>
+      <object>objects\obj_mainMenuButton</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41947.1831168403</constant>
+    <constant name="GM_build_date">41947.9710310648</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

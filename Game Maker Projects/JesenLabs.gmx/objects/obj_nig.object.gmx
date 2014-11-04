@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Initialize Variables
 
-grav = 0.2;
+grav = 0.36;
 hsp = 0;
 vsp = 0;
 jumpspeed = 7;
@@ -63,7 +63,7 @@ key_left = -keyboard_check(vk_left);
 key_jump = keyboard_check_pressed(vk_space);
 
 if (key_left == -1) {
-    sprite_index = 0;
+    image_index = 0;
 }
 
 //React to input
@@ -76,7 +76,12 @@ if (vsp &lt; 10) {
 if (place_meeting(x, y+1, obj_collision)) {
     vsp = key_jump * -jumpspeed;
     if key_jump == 1 {
-        audio_play_sound(sfx_jump, 1, false);
+        if (global.paused == false) {
+            sprite_index = spr_nigJump;
+            image_index = 0;
+            image_speed = 0;
+            audio_play_sound(sfx_jump, 1, false);
+        }
     }
 }
 
@@ -87,16 +92,41 @@ if (place_meeting(x+hsp, y, obj_collision)) {
     }
     hsp = 0;
 }
-x += hsp;
+if (global.paused == false) {
+    x += hsp;
+}
 
 //Vertical Collision
 if (place_meeting(x, y+vsp, obj_collision)) {
     while (!place_meeting(x, y+sign(vsp), obj_collision)) {
         y += sign(vsp);
     }
+    image_speed = 1;
     vsp = 0;
 }
-y += vsp;
+
+if (sprite_index = spr_nigJump and image_index = 12) {
+    sprite_index = spr_nig;
+}
+
+if (global.paused == false) {
+    y += vsp;
+}
+
+//Keep sprite index constant equal to 0 if paused
+if (global.paused == true) {
+    image_speed = 0;
+}
+if keyboard_check(vk_escape) {
+    if (sprite_index == spr_nigJump) {
+        if (image_index != 0) {
+            image_speed = 1;
+        }
+    }
+    else {
+        image_speed = 1;
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -120,7 +150,7 @@ y += vsp;
           <argument>
             <kind>1</kind>
             <string>scr_playerDie();
-scr_respawn(512, 320, obj_nig);
+scr_respawn(320, 240, obj_nig);
 </string>
           </argument>
         </arguments>

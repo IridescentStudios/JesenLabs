@@ -26,6 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>counter = 0;
+globalvar paused;
+globalvar selectedPause;
+paused = false;
 </string>
           </argument>
         </arguments>
@@ -48,12 +51,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (counter &lt; 7) {
-    counter += 1;
-}
-else if (counter == 7) {
-    scr_createObjects(1);
-    counter = 0;
+            <string>if (global.paused == false) {
+    if (counter &lt; 7) {
+        counter += 1;
+    }
+    else if (counter == 7) {
+        scr_createObjects(1);
+        counter = 0;
+    }
 }
 </string>
           </argument>
@@ -100,7 +105,43 @@ else if (counter == 7) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>game_end();
+            <string>global.selectedPause = "Resume Game";
+
+if global.paused == false
+    {
+        instance_create(room_width / 2, 80, obj_pauseText);
+        instance_create((room_width / 2) - 160, 360, obj_resumeButton);
+        instance_create((room_width / 2) + 160, 360, obj_mainMenuButton);
+        global.paused = true;
+        background_hspeed[0] = 0;
+    }
+
+else if global.paused == true
+    {
+        with obj_pause
+        {
+            instance_destroy();
+        }
+        with obj_pauseText
+        {
+            instance_destroy();
+        }
+        with obj_resumeButton
+        {
+            instance_destroy();
+        }
+        with obj_mainMenuButton
+        {
+            instance_destroy();
+        }
+        if file_exists("pause_screenshot.png")
+        {
+            file_delete("pause_screenshot.png");
+        }
+        instance_activate_all();
+        global.paused = false;
+        background_hspeed[0] = -1;
+    }
 </string>
           </argument>
         </arguments>
