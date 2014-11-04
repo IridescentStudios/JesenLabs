@@ -32,6 +32,7 @@
   <scripts name="scripts">
     <script>scripts\scr_playerDie.gml</script>
     <script>scripts\scr_respawn.gml</script>
+    <script>scripts\scr_createObjects.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Room">
@@ -50,6 +51,7 @@
       <object>objects\obj_dirtMove</object>
     </objects>
     <objects name="Parents">
+      <object>objects\obj_collisionMove</object>
       <object>objects\obj_collision</object>
     </objects>
     <objects name="Invisible/Dev">
@@ -60,7 +62,7 @@
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41947.108824919</constant>
+    <constant name="GM_build_date">41947.1831168403</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

@@ -62,6 +62,10 @@ key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
 key_jump = keyboard_check_pressed(vk_space);
 
+if (key_left == -1) {
+    sprite_index = 0;
+}
+
 //React to input
 move = key_left + key_right;
 hsp = move * movespeed;
