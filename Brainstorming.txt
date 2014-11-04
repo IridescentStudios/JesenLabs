@@ -5,3 +5,17 @@ Mike - Game ideas? :D
 Birdi - Well I was thinking that we could have a game where you are in a 2D side scroller and you are running from Jesen there are like power-up and power-downs to make the game fun?? Maybe let me know
 
 Mike - Sure, always moving one direction (opposite of Jesen) and the only real keys are jump, pause, use powerup (maybe if we make situational ones like invincibility? or maybe a powerup could be double jump that lasts for the rest of the game or a duration of time) and maybe down button to go down through a small platform like in terraria or old platformers
+
+Concept: 2d sidescroller, play as Nig, constantly running right, procedurally positioned obstacles and powerups, and Jesen chasing you
+
+Planned features list:
+
+-Procedurally placed obstacles (walls and pimp-as) and powerups (pimp-os)
+
+-Ability to jump (also through thin platforms) and drop down through thin platforms
+
+-Parallax sidescrolling background (clouds and pillars separate, maybe foreground and background pillars separate too, all scrolling slower than the obstacles
+
+-Maybe a cute day/night cycle if we feel up to it :D
+
+-Sexay animations <3
