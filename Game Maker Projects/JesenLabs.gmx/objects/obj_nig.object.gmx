@@ -69,7 +69,7 @@ if (key_left == -1) {
 //React to input
 move = key_left + key_right;
 hsp = move * movespeed;
-if (vsp &lt; 10) {
+if (vsp &lt; 10 and global.paused == false) {
     vsp += grav;
 }
 
