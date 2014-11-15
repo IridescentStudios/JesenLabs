@@ -69,7 +69,7 @@
     <room>rooms\rm_main</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41947.9710310648</constant>
+    <constant name="GM_build_date">41958.0728555671</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
